@@ -11,11 +11,11 @@
 
 
     if($_GET['action'] == 'search'){
-        $sql = 'select * from paciente';
-        $result = $con->query();
+        $sql = 'select * from paciente where id =' $_GET['id'];
+        echo $sql;
+        $result = $con->query($sql);
 
         $row = $result -> fetch_assoc();
-        echo $row['nombre'];
     }
 ?>
 
@@ -30,10 +30,19 @@
 </head>
     <body>
         Search for patient
-        <form action="">
-            <input placeholder="patientId">
+        <form action="search" method='get'>
+            <input placeholder="patientId" name="id">
             <input type="submit" value="Search" >
         </form>
         <p>New patient? <a href="#">Register</a></p>
+
+        <?php 
+            echo $row["nombre"];
+        ?>
+        br
+        <?php 
+            echo $row["apellido_paterno"];
+        ?>
+
     </body>
 </html>
