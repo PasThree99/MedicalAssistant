@@ -10,7 +10,7 @@
     }
 
 
-    if($_GET['action'] == 'search'){
+    if(isset($_GET['id'])){
 
         
 
@@ -35,8 +35,8 @@
 </head>
     <body>
         Search for patient
-        <form action="">
-            <input placeholder="patientId">
+        <form action="" method="get">
+            <input placeholder="patientId" name="id">
             <input type="submit" value="Search" >
         </form>
         <p>New patient? <a href="#">Register</a></p>
