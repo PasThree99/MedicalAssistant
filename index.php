@@ -15,7 +15,7 @@
         $result = $con->query();
 
         $row = $result -> fetch_assoc();
-        echo $row['nombre']
+        echo $row['nombre'];
     }
 ?>
 
