@@ -1,6 +1,25 @@
+<?php
+    $server = '127.0.0.1:3306';
+    $username = 'root';
+    $password = '12345678';
+    $db = 'mediHelper';
+
+    $con = mysqli_connect($server,$username,$password,$db);
+    if($con -> connect_error){
+        die ("connection failed: " . $con->connect_error);
+    }
 
 
-<!DOCTYPE html>
+    if($_GET['action'] == 'search'){
+        $sql = 'select * from paciente';
+        $result = $con->query();
+
+        $row = $result -> fetch_assoc();
+        echo $row['nombre']
+    }
+?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
