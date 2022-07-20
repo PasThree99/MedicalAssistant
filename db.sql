@@ -18,4 +18,4 @@ values ("curp2","Juan","Perez","Gomes","2000-01-12",1.80);
 insert into paciente (curp,nombre,apellido_paterno,apellido_materno,fecha_de_nacimiento,estatura)
 values ("curp3","Karla","Rodriguez","Hernandez","2001-08-18",1.67);
 
-select * from pacpaiente;
+select * from paciente;

@@ -39,9 +39,21 @@
         <?php 
             echo $row["nombre"];
         ?>
-        br
+        <br>
         <?php 
             echo $row["apellido_paterno"];
+        ?>
+        <br>
+        <?php 
+            echo $row["apellido_materno"];
+        ?>
+        <br>
+        <?php 
+            echo $row["fecha_de_nacimiento"];
+        ?>
+        <br>
+        <?php 
+            echo $row["edad"];
         ?>
 
     </body>
