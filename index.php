@@ -6,12 +6,12 @@
 
     $con = mysqli_connect($server,$username,$password,$db);
     if($con -> connect_error){
-        die ("connection failed: " . $con->connect_error);
+        die ("Connection failed: " . $con->connect_error);
     }
 
 
     if($_GET['action'] == 'search'){
-        $sql = 'select * from paciente where id =' $_GET['id'];
+        $sql = 'select * from paciente where curp = "'. $_GET['id'] . '"' ;
         echo $sql;
         $result = $con->query($sql);
 
