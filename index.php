@@ -9,7 +9,6 @@
         die ("Connection failed: " . $con->connect_error);
     }
 
-
     if(isset($_GET['id'])){
         $sql = "select * from paciente where curp = '". $_GET['id'] . "'" ;
         echo $sql;
@@ -18,7 +17,6 @@
         
     }
 ?>
-
 
 <html lang="en">
 <head>

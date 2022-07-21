@@ -9,7 +9,6 @@
         die ("Connection failed: " . $con->connect_error);
     }
 
-
     if(isset($_GET['submit'])){
         $curp = $_GET['id'];
         $name = $_GET['name'];
@@ -47,6 +46,5 @@
             <input type="submit" value="Search" name="submit" >
         </form>
        
-
     </body>
 </html>
