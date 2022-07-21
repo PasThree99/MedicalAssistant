@@ -11,16 +11,9 @@
 
 
     if(isset($_GET['id'])){
-
-        
-
         $sql = 'select * from paciente where curp = "'. $_GET['id'] . '"' ;
-        echo $sql;
         $result = $con->query($sql);
-
-
         $row = $result -> fetch_assoc();
-        echo $row['nombre'];
     }
 ?>
 
@@ -34,12 +27,13 @@
     <link rel="stylesheet" href="indexStyles.css">
 </head>
     <body>
+
         Search for patient
         <form action="" method="get">
             <input placeholder="patientId" name="id">
             <input type="submit" value="Search" >
         </form>
-        <p>New patient? <a href="#">Register</a></p>
+        <p>New patient? <a href="register.php">Register</a></p>
 
         <?php 
             echo $row["nombre"];
