@@ -17,9 +17,9 @@
         $ln2 = $_GET['ln2'];
         $date = $_GET['date'];
         $hg = $_GET['height'];
+        $hg = (float) $hg;
+        $sql = "insert into paciente (curp,nombre,apellido_paterno,apellido_materno,fecha_de_nacimiento,estatura) values ('$curp ',' $name ',' $ln1 ',' $ln2  ','  $date  ', $hg )";
 
-        $sql = "insert into pacientes (curp,nombre,apellido_paterno,apellido_materno,fecha_de_nacimiento,estatura) values ('$curp ',' $name ',' $ln1 ',' $ln2  ','  $date  ',' $hg ')";
-        
         $con->query($sql);
         
     }
