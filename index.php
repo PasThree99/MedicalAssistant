@@ -13,7 +13,11 @@
     if(isset($_GET['id'])){
         $sql = 'select * from paciente where curp = "'. $_GET['id'] . '"' ;
         $result = $con->query($sql);
-        $row = $result -> fetch_assoc();
+        while($result -> fetch_assoc();){
+
+            $row = $result -> fetch_assoc();
+            echo $row['name'];
+        }
     }
 ?>
 
