@@ -12,12 +12,10 @@
 
     if(isset($_GET['id'])){
         $sql = 'select * from paciente where curp = "'. $_GET['id'] . '"' ;
+        echo $sql;
         $result = $con->query($sql);
-        while($result -> fetch_assoc();){
-
-            $row = $result -> fetch_assoc();
-            echo $row['name'];
-        }
+        $row = $result -> fetch_assoc();
+        
     }
 ?>
 
