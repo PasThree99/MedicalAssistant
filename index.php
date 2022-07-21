@@ -11,7 +11,7 @@
 
 
     if(isset($_GET['id'])){
-        $sql = 'select * from paciente where curp = "'. $_GET['id'] . '"' ;
+        $sql = "select * from paciente where curp = '". $_GET['id'] . "'" ;
         echo $sql;
         $result = $con->query($sql);
         $row = $result -> fetch_assoc();
